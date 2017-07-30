@@ -1,0 +1,92 @@
+/*
+  model.hpp
+  A class used to describe a car model.
+ */
+#include <string>
+
+class Model
+{
+    enum Powertrain { FWD, RWD, XDRIVE, SDRIVE };
+    enum FuelType { GASOLINE, DIESEL, ELECTRIC, IPERFORMANCE };
+public:
+    // Accessors
+    std::string GetModelCode() { return _modelCode; }
+    std::string GetModelGroup() { return _modelGroup; }
+    std::string GetFuelType() { return _fuelType; }
+    Powertrain GetPowerTrain() { return _powerTrain; }
+    int GetMilesPerGallon() { return _milesPerGallon; }
+    bool IsFrontWheel();
+    bool IsRearWheel();
+    bool IsSDrive();
+    bool IsXDrive();
+    
+    // Modifiers
+    void SetAcceleration(const float&);
+    void SetBodyStyle(const std::string&);
+    //void SetBrandCategory(const std::string&);
+    //void SetCosyUrl(const std::string&);
+    void SetDealerContribution(const float&);
+    void SetDescription(const std::string&);
+    void SetDueAtSigning(const float&);
+    void SetFuelType(const std::string&);
+    void SetLeaseOffer(const float&);
+    void SetLeaseOfferDisclaimer(const std::string&);
+    void SetMilesPerGallon(const int);
+    void SetModelGroup(const std::string&);
+    void SetModelCode(const std::string&);
+    void SetPowerTrain(const std::string&);
+    void SetSeries(const std::string&);
+    void SetMSRP();
+    void SetYear(const int&);
+    
+private:
+    std::string _modelCode;
+    std::string _modelGroup;
+    std::string _fuelType;
+    Powertrain _powerTrain;
+    int _milesPerGallon;
+    int _year;
+    float _acceleration;
+    int _msrp;
+    std::string _description;
+    std::string _leaseOfferDisclaimer;
+    int _dueAtSigning;
+    int _dealerContribution;
+    int _leaseOffer;
+    float _rateFactor; // rateFactor
+    float _residualPercentage; // residualPercentage
+    std::string _technicalText; // technicalText
+};
+
+void Model::SetModelCode(const std::string& mcode)
+{
+    _modelCode = mcode;
+}
+
+void Model::SetModelGroup(const std::string& mgroup)
+{
+    _modelGroup = mgroup;
+}
+
+void Model::SetFuelType(const std::string& ftype)
+{
+    _fuelType = ftype;
+}
+
+void Model::SetPowerTrain(const std::string& ptrain)
+{
+    if(ptrain == "Front-wheel drive")
+	_powerTrain = FWD;
+    else if(ptrain == "Rear-wheel drive")
+	_powerTrain = RWD;
+    else if(ptrain == "XDrive")
+	_powerTrain = XDRIVE;
+    else if(ptrain == "SDrive")
+	_powerTrain = SDRIVE;
+    
+}
+
+void Model::SetMilesPerGallon(const int mpg)
+{
+    _milesPerGallon = mpg;
+}

@@ -1,0 +1,22 @@
+#!/usr/bin/env python
+
+import json;
+import sys;
+
+modelCodes = []
+
+if __name__ == "__main__":
+    print "bmwmodels.py running solo"
+
+def get_bmw_model_codes(j):
+    for series in j["series"]:
+        for bodystyle in series["bodyStyles"]:
+            for model in bodystyle["models"]:
+                print model["naModelCode"]
+    
+    
+with open('bmw_models.json', 'r') as f:
+    j = json.load(f)
+    get_bmw_model_codes(j)
+
+    

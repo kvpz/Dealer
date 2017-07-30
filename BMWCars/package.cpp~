@@ -1,0 +1,22 @@
+/*
+  package.cpp
+  
+  conflictRemoveOptions: there are several conflicts for M sports package
+  for the 230i. Conflicts can be detected by .byoConfiguration.packages[4].hasConflict
+  where the 4 is only for this example. These options can be determined by a unique
+  code 
+*/
+
+#include <iostream>
+
+class Package
+{
+public:
+    
+private:
+    std::string _code;
+    std::string _name;
+    std::string _price; // list price
+    std::string _description; // long description
+    
+};

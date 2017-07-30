@@ -1,0 +1,14 @@
+/*
+  wheel.hpp
+
+*/
+
+#include <iostream>
+
+class Wheel
+{
+public:
+
+private:
+    std::string _code;
+};

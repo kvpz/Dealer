@@ -1,0 +1,16 @@
+/*
+  option.hpp
+
+  
+ 
+*/
+
+#include <iostream>
+
+class Option
+{
+public:
+
+private:
+    
+};

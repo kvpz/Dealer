@@ -1,0 +1,16 @@
+/*
+  test_upholstery.cpp
+
+*/
+
+#include <iostream>
+#include <upholstery.hpp>
+
+
+int main()
+{
+  Upholstery upholstery;
+  upholstery.SetRGB();
+  
+  return 0;
+}

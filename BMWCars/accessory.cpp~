@@ -1,0 +1,80 @@
+/*
+  BMW car accessories;
+
+  Code: US_04637
+  Name: BMW M Performance 19" Style 405M Complete Wheel Set
+  Category (categoryDisplay): BMWM Performance Accessories
+  SalesGroup: BMW M Performance
+  Description: ....
+  Image: https://www.bmwusa.com/...
+ */
+
+#include <iostream>
+
+class Accessory
+{
+public:
+
+    // Accessors
+    const std::string& GetCode() { return _code; }
+    const std::string& GetName() { return _name; }
+    const std::string& GetCategory() { return _category; }
+    const std::string& GetSalesGroup() { return _salesGroup; }
+    const std::string& GetDescription() { return _description; }
+    const std::string& GetImage() { return _image; }
+    const float GetPrice() { return _price; }
+    
+    // Modifiers
+    void SetCode(std::string&);
+    void SetName(std::string&);
+    void SetCategory(std::string&);
+    void SetSalesGroup(std::string&);
+    void SetDescription(std::string&);
+    void SetImage(std::string&);
+    void SetPrice(float);
+    
+private:
+    std::string _code;
+    std::string _name;
+    std::string _category; // category/ categoryDisplay
+    std::string _salesGroup;
+    std::string _description;
+    std::string _image;
+    float _price;
+    
+};
+
+void Accessory::SetCode(std::string& code)
+{
+    _code = code;
+}
+
+void Accessory::SetName(std::string& name)
+{
+    _name = name; 
+}
+
+void Accessory::SetCategory(std::string& category)
+{
+    _category = category;
+}
+
+void Accessory::SetSalesGroup(std::string& salesGroup)
+{
+    _salesGroup = salesGroup;
+}
+
+void Accessory::SetDescription(std::string& description)
+{
+    _description = description;
+}
+
+void Accessory::SetImage(std::string& imageurl)
+{
+    _image = imageurl;
+}
+
+void Accessory::SetPrice(float price)
+{
+    _price = price;
+}

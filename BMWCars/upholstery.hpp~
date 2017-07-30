@@ -1,0 +1,26 @@
+/*
+  upholstery.cpp
+  
+  Contains information pertaining to the interior.
+  
+  < IMPORTANT PROPERTY PATHS >
+  .byoConfiguration.leathers
+  .byoConfiguration.leathers["0"].packages
+  .byoConfiguration.leathers["0"].byooption
+ 
+*/
+
+#include <iostream>
+#include <Color.hpp>
+
+class Upholstery
+{
+    friend class Color;
+public:
+    
+private:
+    std::string _name;
+    std::string _price;
+    std::string _familyCode;
+    
+};
